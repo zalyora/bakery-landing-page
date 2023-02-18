@@ -1,0 +1,29 @@
+@import 'variables', 'mixins';
+
+.wrapper{
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Sen', sans-serif;
+    & .header {
+        & h1 {
+            @include title;
+        }
+        & .button {
+            @include button;
+        }
+    }
+    & .main {
+        & section {
+            & h2 {
+                @include subtitle;
+            }
+        }
+    }
+    article {
+        & p {
+            @include description;
+        }
+    }
+}
+input {
+    @include custom-input;
+}

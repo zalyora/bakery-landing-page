@@ -1,0 +1,44 @@
+@mixin subtitle {
+    font-family: 'Sen';
+    font-weight: 800;
+    font-size: 144px;
+    line-height: 96%;
+    text-transform: uppercase;
+}
+
+@mixin title {
+    font-family: 'Sen';
+    font-weight: 800;
+    font-size: 74px;
+    line-height: 89px;
+    text-transform: uppercase;
+}
+@mixin motto {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+@mixin description {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--secondary-text-color);
+}
+@mixin button {
+    padding: 18px 53px;
+    background-color: var(--button-color);
+    color: var(--main-text-color);
+    border-radius: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+@mixin custom-input {
+    background-color: var(--secondary-bg-color);
+    border: solid 1px var(--secondary-bg-color);
+    border-radius: var(--input-radius);
+    width: 374px;
+    height: 56px;
+}
