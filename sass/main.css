@@ -16,18 +16,25 @@
   --input-radius: 61px;
 }
 
-.wrapper {
-  font-family: "Poppins", sans-serif;
-  font-family: "Sen", sans-serif;
-  box-sizing: border-box;
-}
-
 .header {
-  padding: 0 var(--container-padding) 0;
-  padding-top: 26px;
+  padding: 26px var(--container-padding) var(--zero-space);
   padding-bottom: var(--small-margin);
   height: 100%;
-  background: url(../assets/bg-pattern-tr.svg) 100% no-repeat, linear-gradient(90deg, var(--main-bg-color) 63.8947368421%, var(--main-text-color) 36.1052631579%);
+  background-image: url(../assets/bg-pattern-brown.png);
+  background-color: var(--main-text-color);
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.header::before, .header::after {
+  content: "";
+  background-image: linear-gradient(90deg, var(--main-bg-color) 63.8947368421%, rgba(255, 255, 255, 0.1) 36.1052631579%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
 }
 .header .logo {
   display: flex;
@@ -91,17 +98,18 @@
 }
 .header .social-media {
   position: absolute;
-  background-image: url(../assets/bg-pattern-bl.svg);
+  background-image: url(../assets/bg-pattern-brown.png);
   background-color: var(--main-text-color);
   padding: 30px 67px 27px 388px;
-  left: 0;
-  bottom: -15px;
+  left: -1px;
+  bottom: -16px;
 }
 .header .social-media .social-media-item {
   list-style: none;
 }
 .header address {
-  margin-bottom: 219px;
+  margin-top: 219px;
+  padding-left: 14%;
   font-family: "Poppins";
   font-weight: 600;
   font-size: 18px;
@@ -118,17 +126,31 @@
 }
 
 .main section .centered {
-  padding: 0 var(--container-padding) 0;
+  padding: var(--zero-space) var(--container-padding) var(--zero-space);
 }
 .main .our-work {
   height: 100%;
-  background: url(../assets/bg-pattern3.png) no-repeat, linear-gradient(90deg, var(--main-text-color) 0%, var(--main-text-color) 36.2631578947%, var(--main-bg-color) 63.7368421053%, var(--main-bg-color) 100%);
+  background-image: url(../assets/bg-pattern-brown.png);
+  background-color: var(--main-text-color);
+  background-size: cover;
+  position: relative;
+  z-index: 1;
   padding: var(--big-margin) var(--zero-space);
+}
+.main .our-work::before, .main .our-work::after {
+  content: "";
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 36.2631578947%, var(--main-bg-color) 63.7368421053%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
 }
 .main .our-work h2 {
   font-family: "Sen";
   font-weight: 800;
-  font-size: 144px;
+  font-size: 7.54vw;
   line-height: 96%;
   text-transform: uppercase;
   padding: var(--zero-space);
@@ -182,7 +204,7 @@
 .main .about .centered-block h2 {
   font-family: "Sen";
   font-weight: 800;
-  font-size: 144px;
+  font-size: 7.54vw;
   line-height: 96%;
   text-transform: uppercase;
   padding: var(--zero-space);
@@ -227,7 +249,7 @@
 .main .services h2 {
   font-family: "Sen";
   font-weight: 800;
-  font-size: 144px;
+  font-size: 7.54vw;
   line-height: 96%;
   text-transform: uppercase;
   padding: var(--zero-space);
@@ -278,16 +300,15 @@
 .main .testimonials {
   padding: var(--big-margin) var(--zero-space);
   background-image: url("../assets/background-pattern.png");
-  background-size: 100%;
+  background-size: cover;
   background-color: var(--main-bg-color);
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
 }
 .main .testimonials h2 {
   font-family: "Sen";
   font-weight: 800;
-  font-size: 144px;
+  font-size: 7.54vw;
   line-height: 96%;
   text-transform: uppercase;
   padding: var(--zero-space);
@@ -351,7 +372,7 @@
 .footer h2 {
   font-family: "Sen";
   font-weight: 800;
-  font-size: 144px;
+  font-size: 7.54vw;
   line-height: 96%;
   text-transform: uppercase;
   padding: var(--zero-space);
@@ -381,9 +402,6 @@
   color: var(--main-bg-color);
 }
 .footer .container form input::-moz-placeholder {
-  color: var(--main-bg-color);
-}
-.footer .container form input:-ms-input-placeholder {
   color: var(--main-bg-color);
 }
 .footer .container form input::placeholder {

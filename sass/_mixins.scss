@@ -1,7 +1,7 @@
 @mixin subtitle {
     font-family: 'Sen';
     font-weight: 800;
-    font-size: 144px;
+    font-size: 7.54vw;
     line-height: 96%;
     text-transform: uppercase;
     padding: var(--zero-space);
@@ -56,5 +56,5 @@
     font-size: inherit;
 }
 @mixin container {
-    padding: 0 var(--container-padding) 0;
+    padding: var(--zero-space) var(--container-padding) var(--zero-space);
 }
