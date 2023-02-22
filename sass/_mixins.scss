@@ -4,6 +4,8 @@
     font-size: 144px;
     line-height: 96%;
     text-transform: uppercase;
+    padding: var(--zero-space);
+    margin: var(--zero-space) var(--zero-space) var(--big-margin);
 }
 
 @mixin title {
@@ -28,17 +30,31 @@
     color: var(--secondary-text-color);
 }
 @mixin button {
-    padding: 18px 53px;
+    padding: 18px;
     background-color: var(--button-color);
     color: var(--main-text-color);
-    border-radius: 30px;
+    border-radius: var(--middle-margin);
     text-decoration: none;
     text-transform: uppercase;
+    font-family: 'Poppins';
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    width: 195px;
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: var(--big-margin);
 }
 @mixin custom-input {
     background-color: var(--secondary-bg-color);
     border: solid 1px var(--secondary-bg-color);
     border-radius: var(--input-radius);
-    width: 374px;
-    height: 56px;
+    width: 302px;
+    padding: 17.5px 36px;
+    font-family: inherit;
+    font-size: inherit;
+}
+@mixin container {
+    padding: 0 var(--container-padding) 0;
 }
