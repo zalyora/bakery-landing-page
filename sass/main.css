@@ -96,6 +96,9 @@
   display: block;
   margin-bottom: var(--big-margin);
 }
+.header .button:hover {
+  background-color: rgba(253, 186, 16, 0.7);
+}
 .header .social-media {
   position: absolute;
   background-image: url(../assets/bg-pattern-brown.png);
@@ -106,6 +109,10 @@
 }
 .header .social-media .social-media-item {
   list-style: none;
+}
+.header .social-media .social-media-item:hover {
+  transform: scale(1.5);
+  transition: 0.3s;
 }
 .header address {
   margin-top: 219px;
@@ -123,6 +130,10 @@
   color: inherit;
   display: inline-block;
   margin-left: var(--inter-element-space);
+}
+.header address a:hover {
+  text-decoration: underline;
+  text-shadow: 4px 4px 10px rgba(251, 251, 251, 0.6);
 }
 
 .main section .centered {
@@ -193,6 +204,9 @@
   margin-bottom: var(--big-margin);
   margin: 0 auto;
 }
+.main .our-work .button:hover {
+  background-color: rgba(253, 186, 16, 0.7);
+}
 .main .about {
   height: 100%;
   background: linear-gradient(90deg, var(--main-bg-color) 63.8947368421%, var(--main-text-color) 36.1052631579%);
@@ -236,6 +250,9 @@
   box-sizing: border-box;
   display: block;
   margin-bottom: var(--big-margin);
+}
+.main .about .centered-block .button:hover {
+  background-color: rgba(253, 186, 16, 0.7);
 }
 .main .about .centered-block img {
   position: absolute;
@@ -296,6 +313,9 @@
   display: block;
   margin-bottom: var(--big-margin);
   margin: 0 auto;
+}
+.main .services .button:hover {
+  background-color: rgba(253, 186, 16, 0.7);
 }
 .main .testimonials {
   padding: var(--big-margin) var(--zero-space);
@@ -365,6 +385,9 @@
   margin-bottom: var(--big-margin);
   margin: 0 auto;
 }
+.main .testimonials .button:hover {
+  background-color: rgba(253, 186, 16, 0.7);
+}
 
 .footer {
   padding-top: var(--big-margin);
@@ -388,6 +411,7 @@
 }
 .footer .container form {
   margin-right: calc(var(--big-margin) * 2);
+  position: relative;
 }
 .footer .container form input {
   background-color: var(--secondary-bg-color);
@@ -395,8 +419,10 @@
   border-radius: var(--input-radius);
   width: 302px;
   padding: 17.5px 36px;
-  font-family: inherit;
-  font-size: inherit;
+  font-family: "Poppins";
+  font-size: 500;
+  font-size: 14px;
+  line-height: 17px;
   display: block;
   margin-bottom: var(--inter-element-space);
   color: var(--main-bg-color);
@@ -409,6 +435,30 @@
 }
 .footer .container form input:focus {
   outline: 3px solid var(--main-bg-color);
+}
+.footer .container form input:invalid {
+  border: 1px solid #ED0131;
+  outline: 1px solid #ED0131;
+}
+.footer .container form .error-top, .footer .container form .error-bottom {
+  color: #ED0131;
+  display: none;
+  font-family: "Poppins";
+  font-size: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+.footer .container form input:invalid + .error-top {
+  display: block;
+  position: absolute;
+  left: -164px;
+  top: 0;
+}
+.footer .container form input:invalid + .error-bottom {
+  display: block;
+  position: absolute;
+  left: -164px;
+  top: 72px;
 }
 .footer .container form button {
   border: 3px solid var(--main-bg-color);
@@ -427,6 +477,12 @@
   margin-bottom: var(--middle-margin);
   margin-left: 103px;
 }
+.footer .container form button:hover {
+  color: var(--button-color);
+  text-shadow: 4px 4px 10px rgba(253, 186, 16, 0.6);
+  border: 3px solid var(--button-color);
+  box-shadow: 4px 4px 10px rgba(253, 186, 16, 0.6);
+}
 .footer .container .contacts {
   padding-top: var(--middle-margin);
   display: flex;
@@ -439,10 +495,22 @@
   gap: var(--small-margin);
 }
 .footer .container .contacts .email a, .footer .container .contacts .phone a, .footer .container .contacts .address a {
+  font-family: "Poppins";
+  font-size: 500;
+  font-size: 14px;
+  line-height: 17px;
   text-decoration: none;
   color: var(--secondary-text-color);
 }
+.footer .container .contacts .email a:hover, .footer .container .contacts .phone a:hover, .footer .container .contacts .address a:hover {
+  text-decoration: underline;
+  text-shadow: 4px 4px 10px rgba(51, 51, 51, 0.6);
+}
 .footer .container .contacts .email address, .footer .container .contacts .phone address, .footer .container .contacts .address address {
+  font-family: "Poppins";
+  font-size: 500;
+  font-size: 14px;
+  line-height: 17px;
   font-style: normal;
   color: var(--secondary-text-color);
 }
@@ -462,4 +530,9 @@
 .copyright a {
   color: inherit;
   text-decoration: none;
+}
+.copyright a:hover {
+  color: var(--button-color);
+  text-decoration: underline;
+  text-shadow: 4px 4px 10px rgba(253, 186, 16, 0.6);
 }/*# sourceMappingURL=main.css.map */

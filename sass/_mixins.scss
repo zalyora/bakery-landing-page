@@ -52,8 +52,10 @@
     border-radius: var(--input-radius);
     width: 302px;
     padding: 17.5px 36px;
-    font-family: inherit;
-    font-size: inherit;
+    font-family: 'Poppins';
+    font-size: 500;
+    font-size: 14px;
+    line-height: 17px;
 }
 @mixin container {
     padding: var(--zero-space) var(--container-padding) var(--zero-space);
