@@ -11,7 +11,7 @@
 @mixin title {
     font-family: 'Sen';
     font-weight: 800;
-    font-size: 74px;
+    font-size: 3.9vw;
     line-height: 89px;
     text-transform: uppercase;
 }
@@ -50,7 +50,7 @@
     background-color: var(--secondary-bg-color);
     border: solid 1px var(--secondary-bg-color);
     border-radius: var(--input-radius);
-    width: 302px;
+    width: 15.9vw;
     padding: 17.5px 36px;
     font-family: 'Poppins';
     font-size: 500;

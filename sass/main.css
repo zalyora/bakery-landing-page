@@ -39,6 +39,7 @@
 .header .logo {
   display: flex;
   padding-bottom: 144px;
+  max-height: 124px;
 }
 .header .logo .logo-img {
   margin-right: var(--big-inter-element-space);
@@ -54,8 +55,8 @@
 .header .banner-image {
   position: absolute;
   top: 319px;
-  left: 886px;
-  width: 666px;
+  left: 45.6vw;
+  width: 35vw;
 }
 .header .banner-image .bread-pile {
   position: absolute;
@@ -65,7 +66,7 @@
 .header h1 {
   font-family: "Sen";
   font-weight: 800;
-  font-size: 74px;
+  font-size: 3.9vw;
   line-height: 89px;
   text-transform: uppercase;
   color: var(--main-text-color);
@@ -75,7 +76,7 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 26px;
-  max-width: 552px;
+  max-width: 29vw;
   color: var(--main-text-color);
   padding-bottom: var(--big-margin);
 }
@@ -103,7 +104,7 @@
   position: absolute;
   background-image: url(../assets/bg-pattern-brown.png);
   background-color: var(--main-text-color);
-  padding: 30px 67px 27px 388px;
+  padding: 1% 3% 1% 20%;
   left: -1px;
   bottom: -16px;
 }
@@ -150,7 +151,7 @@
 }
 .main .our-work::before, .main .our-work::after {
   content: "";
-  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 36.2631578947%, var(--main-bg-color) 63.7368421053%);
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 36.3%, var(--main-bg-color) 36.3%, var(--main-bg-color) 100%);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -168,13 +169,14 @@
   margin: var(--zero-space) var(--zero-space) var(--big-margin);
   color: var(--main-text-color);
   float: right;
+  text-align: right;
 }
 .main .our-work p {
   font-family: "Poppins";
   font-weight: 600;
   font-size: 18px;
   line-height: 26px;
-  max-width: 277px;
+  max-width: 14.5vw;
   color: var(--main-bg-color);
   padding-top: 170px;
   padding-bottom: var(--big-margin);
@@ -185,6 +187,7 @@
 }
 .main .our-work .work-examples img {
   margin-right: var(--small-margin);
+  border-radius: 10px;
 }
 .main .our-work .button {
   padding: 18px;
@@ -226,7 +229,7 @@
   color: var(--main-text-color);
 }
 .main .about .centered-block p {
-  max-width: 508px;
+  max-width: 42%;
   font-family: "Poppins";
   font-weight: 600;
   font-size: 18px;
@@ -276,7 +279,8 @@
 }
 .main .services .services-list {
   display: flex;
-  justify-content: space-between;
+  -moz-column-gap: var(--inter-element-space);
+       column-gap: var(--inter-element-space);
   margin-bottom: var(--big-margin);
 }
 .main .services .services-list article img {
@@ -344,7 +348,7 @@
 .main .testimonials .gratitude-card {
   background-color: var(--main-text-color);
   color: var(--secondary-text-color);
-  max-width: 512px;
+  max-width: 42.7%;
   box-sizing: border-box;
   border-radius: var(--middle-margin);
   padding: var(--small-margin) var(--big-margin);
@@ -410,14 +414,14 @@
   padding-top: var(--big-margin);
 }
 .footer .container form {
-  margin-right: calc(var(--big-margin) * 2);
+  margin-right: 5.2vw;
   position: relative;
 }
 .footer .container form input {
   background-color: var(--secondary-bg-color);
   border: solid 1px var(--secondary-bg-color);
   border-radius: var(--input-radius);
-  width: 302px;
+  width: 15.9vw;
   padding: 17.5px 36px;
   font-family: "Poppins";
   font-size: 500;
@@ -475,7 +479,7 @@
   cursor: pointer;
   width: 168px;
   margin-bottom: var(--middle-margin);
-  margin-left: 103px;
+  margin-left: 5.4vw;
 }
 .footer .container form button:hover {
   color: var(--button-color);
@@ -535,4 +539,50 @@
   color: var(--button-color);
   text-decoration: underline;
   text-shadow: 4px 4px 10px rgba(253, 186, 16, 0.6);
+}
+
+@media screen and (max-width: 1800px) {
+  .header .banner-image img {
+    left: 4% !important;
+  }
+  .about .centered-block h2 {
+    font-size: 7vw !important;
+  }
+  .about .centered-block img {
+    right: -4% !important;
+  }
+  .services .centered {
+    padding: 0 12% 0 !important;
+  }
+}
+@media screen and (max-width: 1580px) {
+  .our-work .work-examples {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .our-work .work-examples img {
+    margin-bottom: var(--inter-element-space);
+  }
+}
+@media screen and (max-width: 1380px) {
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .container form button {
+    margin-left: 4.4vw;
+  }
+  .footer .container .contacts {
+    margin-bottom: var(--small-margin);
+  }
+}
+@media screen and (max-width: 1280px) {
+  .services .services-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .services .services-list article {
+    max-width: 346px;
+  }
 }/*# sourceMappingURL=main.css.map */
